@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Currency Converter</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">Live Exchange Rates - 150+ Currencies</p>
+        
+        <div class="input-group">
+            <label>Amount</label>
+            <input type="number" id="amount" value="1" min="0" placeholder="Enter amount">
+        </div>
+
+        <div class="currency-row">
+            <select id="from"></select>
+            <button class="swap-btn" id="swap-btn">⇄</button>
+            <select id="to"></select>
+        </div>
+
+        <button class="convert-btn" id="convert-btn">Convert Currency</button>
+
+        <div class="result">
+            <div id="result">-</div>
+            <div id="rate">-</div>
+            <div id="timestamp" style="font-size: 12px; color: #666; margin-top: 10px;"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

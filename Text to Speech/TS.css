@@ -66,6 +66,8 @@ button{
      outline: 0;
      cursor: pointer;
      align-items: center;
+     display: flex; /* ADDED */
+     justify-content: center; /* ADDED */
 }
 
 button img{
@@ -88,21 +90,26 @@ select{
     background-size: 15px;
     background-position-x:calc(100% - 20px) ;
     background-position-y:20px;
-    min-width: 0; /* ADDED: Prevents flex item overflow */
-
+    min-width: 0;
 }
 
 @media (max-width: 768px) {
     .row {
         flex-direction: column;
+        gap: 15px; /* ADDED: Consistent gap */
     }
     
     button, select {
         width: 100%;
+        height: 50px; /* ADDED: Same height for both */
+        font-size: 16px; /* ADDED: Same font size */
     }
     
     select {
-        padding-right: 50px; /* ADDED: More space for longer text */
-        font-size: 14px; /* ADDED: Slightly smaller font for long labels */
+        padding-right: 50px;
+    }
+    
+    button {
+        padding: 0 30px; /* CHANGED: Consistent vertical padding */
     }
 }
